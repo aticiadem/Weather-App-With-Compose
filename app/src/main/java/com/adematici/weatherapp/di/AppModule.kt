@@ -1,5 +1,6 @@
 package com.adematici.weatherapp.di
 
+import com.adematici.weatherapp.repository.WeatherRepository
 import com.adematici.weatherapp.service.WeatherAPI
 import com.adematici.weatherapp.util.Constants.BASE_URL
 import dagger.Module
@@ -13,6 +14,10 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object AppModule {
+
+    @Singleton
+    @Provides
+    fun provideWeatherRepository(api: WeatherAPI) = WeatherRepository(api)
 
     @Singleton
     @Provides
