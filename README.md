@@ -27,7 +27,7 @@ App GIF
 </p>
 
 
-[1]: https://github.com/aticiadem/YemekKitabiJSONVeriSeti
+[1]: https://openweathermap.org/api
 [10]: https://developer.android.com/jetpack/compose/architecture
 [12]: https://developer.android.com/jetpack/compose/lifecycle
 [14]: https://developer.android.com/jetpack/compose/navigation
