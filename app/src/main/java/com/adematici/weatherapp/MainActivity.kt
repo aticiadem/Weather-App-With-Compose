@@ -11,12 +11,14 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.navArgument
 import androidx.navigation.compose.rememberNavController
+import coil.annotation.ExperimentalCoilApi
 import com.adematici.weatherapp.ui.theme.WeatherAppTheme
 import com.adematici.weatherapp.ui.view.MainScreen
 import com.adematici.weatherapp.ui.view.SplashScreen
 import com.adematici.weatherapp.ui.view.WeatherScreen
 import dagger.hilt.android.AndroidEntryPoint
 
+@ExperimentalCoilApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +33,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@ExperimentalCoilApi
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
@@ -51,7 +54,6 @@ fun Navigation() {
             )
         ) { backStackEntry ->
             WeatherScreen(
-                navController,
                 city = backStackEntry.arguments?.getString("city")
             )
         }

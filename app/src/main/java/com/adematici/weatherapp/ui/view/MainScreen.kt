@@ -41,7 +41,7 @@ fun MainScreen(navController: NavController) {
             CommonButton {
                 if (city.isNotBlank()) {
                     navController.navigate(
-                        route = "weather_screen/{$city}"
+                        route = "weather_screen/$city"
                     )
                 }
             }
