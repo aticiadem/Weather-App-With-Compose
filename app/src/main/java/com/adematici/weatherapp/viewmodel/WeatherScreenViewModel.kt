@@ -12,8 +12,7 @@ class WeatherScreenViewModel @Inject constructor(
     private val repository: WeatherRepository
 ) : ViewModel() {
 
-    suspend fun getWeatherData(city: String) : Resource<Weather> {
+    suspend fun getWeatherData(city: String): Resource<Weather> {
         return repository.getWeatherData(city)
     }
-
 }
