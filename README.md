@@ -1,6 +1,6 @@
 # Weather-App-With-Compose
 
-In this repository i made weather app with using Jetpack Compose. Datas is coming from internet. You can look in [here][1].
+In this repository I made Weather app with using `Jetpack Compose`. Data is fetching from Internet. You can look in [here][1].
 
 Libraries Used
 --------------
