@@ -11,11 +11,10 @@ import javax.inject.Inject
 class WeatherRepository @Inject constructor(
     private val api: WeatherAPI
 ) {
-
     suspend fun getWeatherData(city: String): Resource<Weather> {
         val response = try {
             api.getWeatherData(city = city)
-        } catch (e: Exception){
+        } catch (e: Exception) {
             return Resource.Error("Try Again.")
         }
         return Resource.Success(response)
